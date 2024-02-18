@@ -1,0 +1,91 @@
+.bg {
+  background: url("images/bg.webp") no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+.bg::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 50%;
+  z-index: -1;
+}
+.bg-gif {
+  width: 100%;
+  max-width: 500px;
+  height: 450px;
+  max-height: 500px;
+  margin-top: 60px;
+}
+
+.home-bg {
+  background: url(images/padded.webp);
+  min-height: 100vh;
+}
+
+/* adding note */
+form.add-note {
+  position: relative;
+  max-width: 480px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+form.add-note input,
+form.add-note textarea {
+  width: 100%;
+  padding: 4px;
+  outline: none;
+  border: none;
+  resize: none;
+  font-size: 1.2rem;
+}
+form.add-note button {
+  position: absolute;
+  right: 18px;
+  bottom: -15px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #f5ba13;
+  color: #fff;
+  border: none;
+  outline: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* note */
+.note {
+  background-color: #fff;
+  width: 280px;
+  padding: 10px;
+  margin: 16px;
+  box-shadow: 0 2px 5px #ccc;
+}
+.note h1 {
+  font-size: 1.2rem;
+}
+.note p {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.note button {
+  position: relative;
+  border: none;
+  outline: none;
+  width: 36px;
+  height: 36px;
+  float: right;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 576px) {
+  .bg-gif {
+    margin-top: 20px;
+  }
+}
